@@ -1,0 +1,6 @@
+                <Frame type="LogMessagePanel" name="LogMessagePanel" template="LogMessagePanel/LogMessagePanelTemplate">
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="1000"/>
+                    <Anchor side="Left" relative="$parent" pos="Min" offset="1000"/>
+                    <Anchor side="Right" relative="$parent" pos="Max" offset="1000"/>
+                    <Height val="230"/>
+                </Frame>

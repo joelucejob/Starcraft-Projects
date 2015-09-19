@@ -1,0 +1,14 @@
+                <Frame type="MessageDisplay" name="DirectiveDisplay">
+                    <AlternateTime val="true"/>
+                    <MaxMessages val="1"/>
+                    <MessageDuration val="0"/>
+                    <FadeDuration val="0"/>
+                    <TopToBottom val="true"/>
+                    <Style val="DirectiveDisplay"/>
+                    <AcceptsMouse val="false"/>
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="170"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+                    <Width val="100"/>
+                    <Height val="50"/>
+                </Frame>

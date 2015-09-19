@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc> 
+
+  <Frame type='CommandPanel' name='GameUI/UIContainer/ConsoleUIContainer/CommandPanel' file='GameUI'>
+  <Anchor side="Bottom" relative="$parent" pos="Min" offset="-500"/>
+  </Frame>
+</Desc>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+  <!-- hide entire console panel -->
+  <Frame name="GameUI/UIContainer/ConsolePanel" type="ConsolePanel" file="GameUI">
+        <Frame type="PortraitPanel" name="PortraitPanel">
+            <Anchor side="Bottom" relative="$parent" pos="Min" offset="-500"/>
+        </Frame>
+  </Frame>
+</Desc>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TriggerData>
+    <Name>RegionValue</Name>
+    <Root>
+        <Item Type="CustomScript" Id="9F55997F"/>
+        <Item Type="Category" Id="A4BDBC3B"/>
+    </Root>
+    <Element Type="Category" Id="A4BDBC3B">
+        <Name>GUI Functions</Name>
+        <Item Type="FunctionDef" Id="583DC001"/>
+        <Item Type="FunctionDef" Id="8D46B843"/>
+    </Element>
+    <Element Type="CustomScript" Id="9F55997F">
+        <Name>3dRegion</Name>
+        <ScriptCode>
+            const int MaxRegions=50;
+            region[MaxRegions] customRegion;
+            fixed[MaxRegions][5] customRegionValue;
+            int regionCount=0;
+            void SetRegionCustomValue (region inputRegion, fixed customValue, int index) {
+                customRegion[regionCount]=inputRegion;
+                customRegionValue[regionCount][index]=customValue;
+                regionCount+=1;
+            };
+            fixed GetRegionCustomValue(region inputRegion, int index) {
+                int k=0;
+                while(k&lt;regionCount) {
+                    if(inputRegion==customRegion[k]) {
+                        return customRegionValue[k][index];
+                    }
+                    k+=1;
+                }
+                return -999;
+            }
+        </ScriptCode>
+    </Element>
+    <Element Type="FunctionDef" Id="583DC001">
+        <Name>Set Region Custom Value</Name>
+        <FlagAction/>
+        <Parameter Type="ParamDef" Id="70FFB560"/>
+        <Parameter Type="ParamDef" Id="5701B265"/>
+        <Parameter Type="ParamDef" Id="2C3E66CE"/>
+        <FunctionCall Type="FunctionCall" Id="281908FB"/>
+    </Element>
+    <Element Type="FunctionDef" Id="8D46B843">
+        <Name>Region Value</Name>
+        <FlagCall/>
+        <ReturnType>
+            <Type Value="fixed"/>
+        </ReturnType>
+        <Parameter Type="ParamDef" Id="CD5F2B0F"/>
+        <Parameter Type="ParamDef" Id="CDF7A076"/>
+        <FunctionCall Type="FunctionCall" Id="F106EFC8"/>
+    </Element>
+    <Element Type="FunctionCall" Id="281908FB">
+        <Name></Name>
+        <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000123"/>
+        <ScriptCode>
+            SetRegionCustomValue (lp_region, lp_value, lp_valueindex); 
+        </ScriptCode>
+    </Element>
+    <Element Type="FunctionCall" Id="F106EFC8">
+        <Name></Name>
+        <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000123"/>
+        <ScriptCode>
+            return GetRegionCustomValue(lp_region, lp_valueindex);
+        </ScriptCode>
+    </Element>
+    <Element Type="Param" Id="0280941D">
+        <Name></Name>
+        <Preset Type="PresetValue" Library="Ntve" Id="F5E3F3AD"/>
+    </Element>
+    <Element Type="Param" Id="1EFFD15E">
+        <Name></Name>
+        <Value>0</Value>
+        <ValueType Type="int"/>
+    </Element>
+    <Element Type="Param" Id="57CF712A">
+        <Name></Name>
+        <Value>0</Value>
+        <ValueType Type="int"/>
+    </Element>
+    <Element Type="Param" Id="925885DF">
+        <Name></Name>
+        <Value>0</Value>
+        <ValueType Type="fixed"/>
+    </Element>
+    <Element Type="Param" Id="C04E995A">
+        <Name></Name>
+        <Preset Type="PresetValue" Library="Ntve" Id="F5E3F3AD"/>
+    </Element>
+    <Element Type="ParamDef" Id="2C3E66CE">
+        <Name>valueindex</Name>
+        <ParameterType>
+            <Type Value="int"/>
+        </ParameterType>
+        <Default Type="Param" Id="57CF712A"/>
+    </Element>
+    <Element Type="ParamDef" Id="5701B265">
+        <Name>value</Name>
+        <ParameterType>
+            <Type Value="fixed"/>
+        </ParameterType>
+        <Default Type="Param" Id="925885DF"/>
+    </Element>
+    <Element Type="ParamDef" Id="70FFB560">
+        <Name>region</Name>
+        <ParameterType>
+            <Type Value="region"/>
+        </ParameterType>
+        <Default Type="Param" Id="0280941D"/>
+    </Element>
+    <Element Type="ParamDef" Id="CD5F2B0F">
+        <Name>region</Name>
+        <ParameterType>
+            <Type Value="region"/>
+        </ParameterType>
+        <Default Type="Param" Id="C04E995A"/>
+    </Element>
+    <Element Type="ParamDef" Id="CDF7A076">
+        <Name>valueindex</Name>
+        <ParameterType>
+            <Type Value="int"/>
+        </ParameterType>
+        <Default Type="Param" Id="1EFFD15E"/>
+    </Element>
+</TriggerData>

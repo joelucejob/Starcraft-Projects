@@ -1,0 +1,59 @@
+Introduction:
+--------
+Tug of war map
+
+Factions
+--------
+When map initializes, players see a dialog screen where they can choose a faction. I have created a total of 9 custom factions - three from each race. Here is the techtree of all the factions. You will notice that faction in a race is only 20% different from each other.
+
+Selendis: https://www.lucidchart.com/documents/view/49c5-4068-50fde3b8-9e39-452b0a004234
+Tal'darim: https://www.lucidchart.com/documents/view/4b4f-5d64-50fdf822-b5db-2b8f0a005798
+Zeratul: https://www.lucidchart.com/documents/view/4546-e518-50fe0213-ae76-61d10a00093e
+Moebius: https://www.lucidchart.com/documents/view/4009-e5ec-50f5eeed-8e33-7c5f0a7b334b
+Raynor: https://www.lucidchart.com/documents/view/4a48-5480-50fe1b0d-9f61-71bf0a004d18
+Dominion: https://www.lucidchart.com/documents/view/426f-3820-50f6f6f5-b5a5-39460a7b334b
+Kerrigan: https://www.lucidchart.com/documents/view/4d56-1264-510250fa-a192-540a0a000fde
+Overmind: https://www.lucidchart.com/documents/view/4a98-cdc4-510251d7-887e-15b00a00093e
+Za'gara: https://www.lucidchart.com/documents/view/49ff-878c-51025379-9179-48c80a004234
+
+the Terrain
+--------
+The battlefield is a large horizontal rectangle island in the center of the map. There will be a total of 6 humans and 2 computers.  humans 1, 2, and 3 areas will be on top part of the map while human 4, 5, and 6 will be on the bottom. Player 7 is computer that is allied with 123 while Player 8, also computer, he is allied with 456. Each human area consists of 4 floating platforms near each other - a tiny size platform (builder), small size platform (spawning), a medium size platform (economy), and a large size platform (building).
+
+How the game works
+--------
+ When a player builds a building, a unit corresponding to the building will be instantly spawned on the player's medium spawn platform. The game will have a continuous countdown of 40 secs. When the countdown 1st reaches zero, Players 1 and Player 4 units will be given to their computer allies and will be teleported right behind their computer allie fortress building. Once teleported, the units make an assault to the enemy fortress. 2nd countdown, Players 2 and 5 will go, then Player 3 and 6 and then back to Player 1 and Player 4.
+
+Hero builder tiny platform
+--------
+After a player selects a faction, a hero character will spawn in the tiny platform. This is the faction builder that builds the buildings. It cannot move, is auto hotkeyed on F1 and a hero F1 button is on the bottom right. Their build range is infinite but can only create within the players region. When a builder is selected, its command card will be filled with ALL the buildings. 
+Players use those minerals to build buildings on their large platform.
+
+Building large platform
+---------
+This area will be empty initially and it is used to house the buildings.
+
+Spawning small platform
+--------
+I would like players to be able to position their units on the small spawning platform. When their units gets teleported to the battlefield. The specific position is copied over to the battlefield. 
+
+Economy medium platform
+------
+Player regardless of faction will be using automated refinery. When players pick their faction and the spawning starts, Players will have 1 refinery initially built. (Players are really getting 8 + 2 minerals per sec) Every second, I want the text: "+2" in blue appear above the automated refineries. Players initially start with 1 refine, max is 6 so that means players can build 5 more refines. There will be no time limit to build another refine and each refine is built instantaneous. That means, if a player has infinite minerals, they can built all refines at same time if they want to. Right when they get another refinery, the text: +2 starts showing up. Therefore, I want that text "+2" to be insync with the player getting minerals. When players have a few refineries, each refine will give out +2 minerals at different times depending on when they built it.
+
+Reading the flowchart tech trees
+--------
+(See site links for tech tree)
+Blue box is the initial command card that is open for the player to use.
+Red lines indicate that the building transforms/mutates into a different building - that means it is NOT located in the command cards. For example: Greater spire mutates from Spire and requires at least 1 Hive built. Protoss requires pylon to be built. Zerg buildings can only build on creep made from Hatch/Lair/Hive. Terran buildings can lift and float around (but won't spawn when lifted)
+ 
+Game ending
+---------
+Cell Block B is the new fortress and will be called: Night Fortress (just like in my sc1 map). Once a Cell Block B is destroyed, all camera will pan to the center of the map where the chrysalis is at. The chrysalis will get destroyed and the builders of the winning team will be warp there (as if they came out of the chrysalis). Camera is locked in the center. There will be a big fat large text saying, "Team A Wins." This whole event will only last 5 sec.
+
+That text will be cleared and another large text will popup: GG! Do you want a rematch? Two buttons will appear right below it side by side. Left button reads, "Rematch" Right button reads, "Quit". Players that select Rematch will go through the map initialization again. Players that select Quit will get a victory screen if they won last round. Players that select Quit will get a losing screen if they lost last round.
+
+Computer on the left (player 7) will be red color.
+Computer on the right (player 8) will be will be blue color.
+
+According to moderators of sc2mapster, map loading can be unstable if you have too many things under Map Initialization trigger. They suggest to simply put in, "Game elapse 1 second" THEN do the map initialization. 

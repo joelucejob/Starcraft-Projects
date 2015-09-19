@@ -1,0 +1,8 @@
+                <Frame type="TimePanel" name="TimePanel" template="TimePanel/TimePanelTemplate">
+                    <Visible val="false"/>
+                    <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                    <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+                    <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+                    <Width val="280"/>
+                    <Height val="58"/>
+                </Frame>

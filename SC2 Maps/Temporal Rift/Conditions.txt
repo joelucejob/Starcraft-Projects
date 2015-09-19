@@ -1,0 +1,51 @@
+===NEGATIVE CONDITIONS===
+
+Poison - -1 health regneration, stacks in duration.
+ 
+Disease - -2 health regneration, stacks in duration and can infect nearby biological characters.
+
+Bleeding - -3 health regneration, stacks in duration and intensity.
+
+Burning - -5 health regneration, stacks in duration.
+
+Crippled - movement speed reduced by 50%, stacks in duration.
+
+Wounded - max health reduced by 25%, unlimited time stacked.
+
+Exhastion - energy regneration lowered, stacks in duration.
+
+Blindness - attacks have 90% chance of missing, stacks in duration.
+
+Dazed - cannot cast abilities, stacks in duration.
+
+Frozen - cannot move or attack, condition is removed if damaged, stacks in duration.
+
+Chilled - movement speed reduced by 25%, stacks in duration.
+
+Weakness - damage is reduced by 20%, stacks in duration.
+
+Stun - cannot move or attack, stacks in duration.
+
+Vulnerable - damage taken is increased by 5%, stacks in duration and intensity.
+
+
+===POSITIVE CONDITIONS===
+
+Swiftness - movement increased by 10%, stacks in duration.
+
+Fury - attack speed increased by 20%, stacks in duration.
+
+Regneration - +1 health regneration, stacks in intensity and duration.
+
+Might - damage increased by 10%, stacks in duration.
+
+Stealth - player becomes invisible and untargetable.
+
+Stability - cannot be knocked back or pulled, stacks in duration.
+
+Adrenaline - 50% incoming damage ignored, stacks in duration.
+
+
+
+
+

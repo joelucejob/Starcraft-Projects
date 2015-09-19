@@ -1,0 +1,6 @@
+                <Frame type="CommandPanel" name="CommandPanel" template="CommandPanel/CommandPanelTemplate">
+                    <Anchor side="Bottom" relative="$parent" pos="Max" offset="200"/>
+                    <Anchor side="Right" relative="$parent" pos="Max" offset="-21"/>
+                    <Width val="400"/>
+                    <Height val="242"/>
+                </Frame>

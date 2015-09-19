@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+<Frame type='Image' name='GameUI/UIContainer/ConsoleUIContainer/BattleNetButtonFriendsFrameImage' file='GameUI'>
+  <Anchor side="Left" pos="min" offset="0" relative="$this" />
+  <Anchor side="Right" pos="max" offset="0" relative="$this" />
+  <Anchor side="Top" pos="min" offset="0" relative="$this" />
+  <Anchor side="Bottom" pos="max" offset="-500" relative="$parent" />
+  </Frame>
+</Desc>
